@@ -27,7 +27,7 @@ npm run preview    # serve the production build
 | | |
 |---|---|
 | URL | open the app → bottom nav → **Admin** (or `#/admin`) |
-| Passcode | **`ayah2024`** |
+| Passcode | **`ayah2026`** |
 | Change it | Admin → Store settings → Change admin passcode ⚠️ *do this first* |
 
 ## 🛠 Add your first product (2 minutes)
@@ -38,13 +38,13 @@ npm run preview    # serve the production build
 4. Toggle **Featured** / **In stock** / **Low stock** as you like.
 5. Tap **Publish product** — it appears in the store instantly for every customer.
 
-Other commands (all visible in the dashboard): **Manage products** (edit / feature / stock / delete), **Categories**, **Store settings** (WhatsApp number, currency, passcode), **Export backup** (JSON download), **Import backup**, **Reset demo data**, **Setup guide**.
+Other commands (all visible in the dashboard): **Manage products** (edit / feature / stock / delete), **Categories**, **Store settings** (WhatsApp number, currency, passcode), **Transfer to another phone** (JSON backup with catalog + settings), **Import backup**, **Reset demo data**, **Setup guide**.
 
 ## 💬 Connect your real WhatsApp number
 
 Admin → **Store settings** → *WhatsApp number* → enter digits with country code (e.g. `15551234567`). Every **“Order on WhatsApp”** button then opens a chat with a **pre-filled message** containing the product name, price and item ID.
 
-> Data (products, categories, favorites, theme) is stored **locally in the browser** via `localStorage` — instant, free, and works offline. Use **Export/Import backup** to move the catalog between devices.
+> Data (products, categories, store settings, favorites, theme) is stored **locally in the browser** via `localStorage` — instant, free, and works offline. Use **Transfer to another phone** and **Import backup** to move the catalog and store settings between devices.
 
 ## ✨ Features
 
@@ -61,7 +61,7 @@ Admin → **Store settings** → *WhatsApp number* → enter digits with country
 - Dashboard: total products, featured count, out-of-stock/low-stock alerts, catalog value
 - Every command visible as a card — nothing hidden
 - Add/edit/delete products with multi-image support (upload resizes images automatically)
-- Featured / out-of-stock / low-stock toggles, category manager, settings, JSON export/import
+- Featured / out-of-stock / low-stock toggles, category manager, persistent settings, transfer backup/export/import
 
 **PWA**
 - Installable (custom neon circuit-“A” icon, maskable + apple-touch icons, shortcuts)
@@ -91,6 +91,6 @@ branding/               # editable icon master (AI-generated brand mark)
 
 **Already deployed!** The official site is **https://ahmed407696.github.io/AYAH/** — GitHub Actions builds and publishes automatically on every merge to `main` (workflow: `.github/workflows/deploy-pages.yml`, builds with `DEPLOY_TARGET=pages` so all URLs get the `/AYAH/` base).
 
-To ship an update: push changes to the `arena/01a08097-ayah` branch → open a PR to `main` → merge. Live in ~40 seconds; installed apps auto-update on next visit thanks to the service worker.
+To ship an update: push changes to the active feature branch → open a PR to `main` → merge. Live in ~40 seconds; installed apps auto-update on next visit thanks to the service worker.
 
 Alternatives (if you ever move): **Vercel / Netlify** — import the repo, build `npm run build`, publish `dist` (no rewrite rules needed thanks to hash routing).
