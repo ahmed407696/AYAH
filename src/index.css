@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-paper font-sans text-night-900 antialiased;
+    overscroll-behavior-y: none;
+  }
+  .dark body {
+    @apply bg-night-950 text-paper-50;
+  }
+  ::selection {
+    @apply bg-brand-500/30;
+  }
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type='number'] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+  select {
+    @apply bg-white dark:bg-night-850;
+  }
+}
+
+@layer utilities {
+  /* horizontal snap rails */
+  .scroll-x {
+    @apply flex overflow-x-auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+  }
+  .scroll-x::-webkit-scrollbar {
+    display: none;
+  }
+  .scroll-x > * {
+    scroll-snap-align: start;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* range slider polish */
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 28px;
+  background: transparent;
+}
+input[type='range']::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #6d5df6, #22d3ee);
+  opacity: 0.85;
+}
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -8px;
+  height: 22px;
+  width: 22px;
+  border-radius: 999px;
+  background: #fff;
+  border: 3px solid #6d5df6;
+  box-shadow: 0 2px 10px rgba(109, 93, 246, 0.45);
+  cursor: pointer;
+}
+input[type='range']::-moz-range-track {
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #6d5df6, #22d3ee);
+  opacity: 0.85;
+}
+input[type='range']::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 999px;
+  background: #fff;
+  border: 3px solid #6d5df6;
+  box-shadow: 0 2px 10px rgba(109, 93, 246, 0.45);
+  cursor: pointer;
+}
