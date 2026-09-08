@@ -38,7 +38,7 @@ function Login() {
       <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} className="w-full max-w-sm">
         <div className="flex flex-col items-center text-center">
           <div className="flex h-20 w-20 items-center justify-center rounded-[1.6rem] bg-gradient-to-br from-brand-500 via-brand-600 to-aqua-600 shadow-glow">
-            <img src="/icons/pwa-192.png" alt="AYAH" className="h-14 w-14 rounded-xl" />
+            <img src="icons/pwa-192.png" alt="AYAH" className="h-14 w-14 rounded-xl" />
           </div>
           <h1 className="mt-4 font-display text-2xl font-bold">Admin access</h1>
           <p className="mt-1 text-sm text-night-600/70 dark:text-white/50">Enter your passcode to manage the AYAH catalog.</p>
@@ -263,7 +263,7 @@ function Dashboard() {
             <div className="mt-3 space-y-2.5">
               {filtered.map((p) => (
                 <div key={p.id} className="flex items-center gap-3 rounded-2xl border border-black/5 dark:border-white/5 bg-white dark:bg-night-850 p-2.5 shadow-sm">
-                  <img src={p.images?.[0] || '/products/placeholder.jpg'} alt="" className="h-12 w-12 shrink-0 rounded-xl object-cover" />
+                  <img src={p.images?.[0] || 'products/placeholder.jpg'} alt="" className="h-12 w-12 shrink-0 rounded-xl object-cover" />
                   <div className="min-w-0 flex-1">
                     <p className="truncate text-[0.8rem] font-bold">{p.name}</p>
                     <p className="text-xs font-semibold text-brand-500 dark:text-brand-400">{formatPrice(p.price, currency)}</p>

@@ -109,7 +109,7 @@ export default function Home() {
               initial={{ opacity: 0, scale: 0.8, rotate: 6 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
               transition={{ delay: 0.15, type: 'spring', stiffness: 160, damping: 18 }}
-              src={heroProduct.images?.[0] || '/products/placeholder.jpg'}
+              src={heroProduct.images?.[0] || 'products/placeholder.jpg'}
               alt=""
               className="animate-float absolute -right-3 bottom-4 h-36 w-36 rounded-3xl object-cover shadow-2xl ring-1 ring-white/30"
             />
@@ -234,7 +234,7 @@ export default function Home() {
             {recent.map((p) => (
               <Link key={p.id} to={`/product/${p.id}`} className="w-64 shrink-0">
                 <div className="flex items-center gap-3 rounded-2xl border border-black/5 dark:border-white/5 bg-white dark:bg-night-850 p-2.5 shadow-sm active:scale-[0.98] transition-transform">
-                  <img src={p.images?.[0] || '/products/placeholder.jpg'} alt="" className="h-14 w-14 rounded-xl object-cover" />
+                  <img src={p.images?.[0] || 'products/placeholder.jpg'} alt="" className="h-14 w-14 rounded-xl object-cover" />
                   <div className="min-w-0 flex-1">
                     <p className="truncate text-sm font-semibold">{p.name}</p>
                     <p className="text-xs font-bold text-brand-500 dark:text-brand-400">{formatPrice(p.price, currency)}</p>

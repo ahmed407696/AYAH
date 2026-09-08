@@ -97,7 +97,7 @@ export default function AdminProductForm() {
       price: Number(form.price),
       oldPrice: form.oldPrice !== '' && Number(form.oldPrice) > Number(form.price) ? Number(form.oldPrice) : null,
       description: form.description.trim(),
-      images: form.images.length ? form.images : ['/products/placeholder.jpg'],
+      images: form.images.length ? form.images : ['products/placeholder.jpg'],
       specs: form.specs.filter((s) => s.k.trim() && s.v.trim()),
       featured: form.featured,
       inStock: form.inStock,

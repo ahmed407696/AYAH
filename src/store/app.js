@@ -23,7 +23,7 @@ const SEED_PRODUCTS = [
     oldPrice: 159,
     description:
       'Flagship over-ear headphones with hybrid active noise cancellation, plush memory-foam cushions and a jaw-dropping 60-hour battery. Studio-grade sound tuned by AYAH acoustics engineers.',
-    images: ['/products/pulse-1.jpg', '/products/pulse-2.jpg'],
+    images: ['products/pulse-1.jpg', 'products/pulse-2.jpg'],
     specs: [
       { k: 'Driver', v: '40 mm dynamic' },
       { k: 'Noise cancelling', v: 'Hybrid ANC, -42 dB' },
@@ -46,7 +46,7 @@ const SEED_PRODUCTS = [
     oldPrice: null,
     description:
       'A titanium-frame flagship with a 6.7" 120 Hz LTPO display, triple 50 MP camera system and all-day 5000 mAh battery. Built for creators who refuse to compromise.',
-    images: ['/products/nova.jpg'],
+    images: ['products/nova.jpg'],
     specs: [
       { k: 'Display', v: '6.7" LTPO AMOLED 120 Hz' },
       { k: 'Camera', v: '50 MP triple + 12 MP front' },
@@ -69,7 +69,7 @@ const SEED_PRODUCTS = [
     oldPrice: 229,
     description:
       'Your health companion on the wrist — always-on AMOLED display, dual-band GPS, heart-rate and SpO2 tracking, and 14 days of battery on a single charge.',
-    images: ['/products/vista.jpg'],
+    images: ['products/vista.jpg'],
     specs: [
       { k: 'Display', v: '1.43" AMOLED always-on' },
       { k: 'Battery', v: 'Up to 14 days' },
@@ -92,7 +92,7 @@ const SEED_PRODUCTS = [
     oldPrice: null,
     description:
       'Feather-light 1.2 kg aluminum unibody with a 14" 2.8K display, 18-hour battery and silent vapor-cool performance. The ultimate machine for work anywhere.',
-    images: ['/products/vertex.jpg'],
+    images: ['products/vertex.jpg'],
     specs: [
       { k: 'Display', v: '14" 2.8K 120 Hz' },
       { k: 'Processor', v: 'Latest gen 8-core' },
@@ -115,7 +115,7 @@ const SEED_PRODUCTS = [
     oldPrice: null,
     description:
       'Compact true-wireless earbuds with rich, punchy sound, crystal-clear calls and pocket-sized charging case. Your everyday soundtrack, untangled.',
-    images: ['/products/drift.jpg'],
+    images: ['products/drift.jpg'],
     specs: [
       { k: 'Driver', v: '11 mm' },
       { k: 'Battery', v: '7 h + 24 h case' },
@@ -137,7 +137,7 @@ const SEED_PRODUCTS = [
     oldPrice: 99,
     description:
       'Secure over-ear hooks, energizing sound and IPX7 sweat proofing — engineered to never fall out mid-workout. Push harder, hear everything.',
-    images: ['/products/arc.jpg'],
+    images: ['products/arc.jpg'],
     specs: [
       { k: 'Driver', v: '13 mm' },
       { k: 'Battery', v: '9 h + 21 h case' },
@@ -159,7 +159,7 @@ const SEED_PRODUCTS = [
     oldPrice: null,
     description:
       'Hot-swappable mechanical switches, per-key RGB and a gasket-mounted design for a typing feel that is as addictive as your favorite game.',
-    images: ['/products/hive.jpg'],
+    images: ['products/hive.jpg'],
     specs: [
       { k: 'Switches', v: 'Hot-swappable red' },
       { k: 'Lighting', v: 'Per-key RGB' },
@@ -181,7 +181,7 @@ const SEED_PRODUCTS = [
     oldPrice: null,
     description:
       'Sculpted for marathon sessions — silent clicks, 4000 DPI precision sensor and a magnetic thumb rest that keeps your wrist in a neutral pose.',
-    images: ['/products/glide.jpg'],
+    images: ['products/glide.jpg'],
     specs: [
       { k: 'Sensor', v: '4000 DPI optical' },
       { k: 'Buttons', v: '6 programmable' },
@@ -202,7 +202,7 @@ const SEED_PRODUCTS = [
     oldPrice: 89,
     description:
       'Room-filling 360° sound in a palm-sized fabric-wrapped cylinder. IP67 waterproof, 20-hour battery and a machined aluminum top plate.',
-    images: ['/products/boom.jpg'],
+    images: ['products/boom.jpg'],
     specs: [
       { k: 'Output', v: '20 W 360°' },
       { k: 'Battery', v: 'Up to 20 hours' },
@@ -223,7 +223,7 @@ const SEED_PRODUCTS = [
     oldPrice: null,
     description:
       '20,000 mAh of pocket electricity with 30 W USB-C PD — fast enough to charge a laptop, rugged enough for every adventure. Built-in cables included.',
-    images: ['/products/volt.jpg'],
+    images: ['products/volt.jpg'],
     specs: [
       { k: 'Capacity', v: '20,000 mAh' },
       { k: 'Output', v: '30 W USB-C PD' },
@@ -244,7 +244,7 @@ const SEED_PRODUCTS = [
     oldPrice: null,
     description:
       'A 27-inch 4K IPS canvas with 99% sRGB, factory-calibrated color and a 75 Hz refresh — pixel-perfect for creators and spreadsheets alike.',
-    images: ['/products/horizon.jpg'],
+    images: ['products/horizon.jpg'],
     specs: [
       { k: 'Panel', v: '27" IPS 4K UHD' },
       { k: 'Color', v: '99% sRGB' },

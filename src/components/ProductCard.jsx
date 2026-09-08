@@ -27,7 +27,7 @@ function ProductCard({ product, index = 0 }) {
     >
       <div className="relative aspect-square overflow-hidden bg-paper-200/60 dark:bg-night-800">
         <img
-          src={product.images?.[0] || '/products/placeholder.jpg'}
+          src={product.images?.[0] || 'products/placeholder.jpg'}
           alt={product.name}
           loading="lazy"
           draggable={false}

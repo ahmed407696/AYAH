@@ -50,7 +50,7 @@ export default function ShareSheet({ product, open, onClose }) {
   return (
     <SheetModal open={open} onClose={onClose} title="Share this product">
       <div className="mb-4 flex items-center gap-3 rounded-2xl bg-white dark:bg-night-850 p-3 border border-black/5 dark:border-white/5">
-        <img src={product.images?.[0] || '/products/placeholder.jpg'} alt="" className="h-12 w-12 rounded-xl object-cover" />
+        <img src={product.images?.[0] || 'products/placeholder.jpg'} alt="" className="h-12 w-12 rounded-xl object-cover" />
         <div className="min-w-0">
           <p className="truncate text-sm font-semibold">{product.name}</p>
           <p className="text-xs text-night-600 dark:text-white/50">{formatPrice(product.price, currency)}</p>

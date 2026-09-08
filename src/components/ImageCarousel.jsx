@@ -4,7 +4,7 @@ import { Expand } from 'lucide-react'
 
 export default function ImageCarousel({ images = [], alt, onTapImage }) {
   const [index, setIndex] = useState(0)
-  const imgs = images.length ? images : ['/products/placeholder.jpg']
+  const imgs = images.length ? images : ['products/placeholder.jpg']
 
   return (
     <div className="relative overflow-hidden bg-paper-200/50 dark:bg-night-800">

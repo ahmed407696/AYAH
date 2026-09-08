@@ -81,7 +81,7 @@ export default function Help() {
 
       <Section title="🔐 Admin" icon={ShieldCheck}>
         <p className="text-sm leading-relaxed text-night-700 dark:text-white/65">
-          Manage products, categories and settings from the Admin panel. Default passcode: <code className="rounded bg-black/5 dark:bg-white/10 px-1.5 py-0.5 font-bold">ayah2024</code> — change it from the Admin dashboard.
+          Manage products, categories and settings from the Admin panel. Default passcode: <code className="rounded bg-black/5 dark:bg-white/10 px-1.5 py-0.5 font-bold">ayah2026</code> — change it from the Admin dashboard.
         </p>
         <Link to="/admin" className="mt-3 flex items-center justify-between rounded-2xl border border-black/5 dark:border-white/10 bg-white dark:bg-night-850 px-4 py-3 text-sm font-semibold active:scale-[0.98] transition-transform">
           Open Admin panel <ChevronRight size={15} className="text-brand-500" />
