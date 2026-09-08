@@ -13,7 +13,7 @@ npm run build      # production build → dist/
 npm run preview    # serve the production build
 ```
 
-The live sandbox preview runs the **production build** (`npm run preview`) on port **4173**.
+**Live site: https://ahmed407696.github.io/AYAH/** — auto-deploys from `main` via GitHub Actions (`.github/workflows/deploy-pages.yml`). The sandbox preview runs the production build (`npm run preview`) on port 4173.
 
 ## 📲 Open it on your phone right now
 
@@ -87,11 +87,10 @@ public/
 branding/               # editable icon master (AI-generated brand mark)
 ```
 
-## 🌐 Deploying for real
+## 🌐 Deployment
 
-Any static host works — the whole app is `dist/`:
+**Already deployed!** The official site is **https://ahmed407696.github.io/AYAH/** — GitHub Actions builds and publishes automatically on every merge to `main` (workflow: `.github/workflows/deploy-pages.yml`, builds with `DEPLOY_TARGET=pages` so all URLs get the `/AYAH/` base).
 
-- **Vercel / Netlify:** import the repo, build `npm run build`, publish `dist` (no rewrite rules needed thanks to hash routing).
-- **GitHub Pages:** push `dist/` to a `gh-pages` branch.
+To ship an update: push changes to the `arena/01a08097-ayah` branch → open a PR to `main` → merge. Live in ~40 seconds; installed apps auto-update on next visit thanks to the service worker.
 
-After deploying, open the link on your phone once, add it to the home screen, and AYAH is installed — updates ship automatically (the service worker auto-updates on next visit).
+Alternatives (if you ever move): **Vercel / Netlify** — import the repo, build `npm run build`, publish `dist` (no rewrite rules needed thanks to hash routing).
