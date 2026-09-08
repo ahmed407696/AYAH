@@ -79,6 +79,14 @@ export default function Help() {
         </p>
       </Section>
 
+      <Section title="📲 Transfer to another phone" icon={RefreshCw}>
+        <ol className="list-inside list-decimal space-y-1.5 text-sm leading-relaxed text-night-700 dark:text-white/65">
+          <li>On the old phone, open <b>Admin</b> and tap <b>Transfer to another phone</b>.</li>
+          <li>Send the downloaded JSON backup to the new phone.</li>
+          <li>On the new phone, open <b>Admin</b> and tap <b>Import backup</b> to restore products, categories and store settings.</li>
+        </ol>
+      </Section>
+
       <Section title="🔐 Admin" icon={ShieldCheck}>
         <p className="text-sm leading-relaxed text-night-700 dark:text-white/65">
           Manage products, categories and settings from the Admin panel. Default passcode: <code className="rounded bg-black/5 dark:bg-white/10 px-1.5 py-0.5 font-bold">ayah2026</code> — change it from the Admin dashboard.

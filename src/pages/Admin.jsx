@@ -2,7 +2,7 @@ import { useMemo, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import {
-  ShieldCheck, LogOut, Plus, Package, Layers, Settings, Download, Upload,
+  ShieldCheck, LogOut, Plus, Package, Layers, Settings, Smartphone, Upload,
   RotateCcw, HelpCircle, Search, Star, PackageCheck, PackageX, Pencil, Trash2,
   Heart, AlertTriangle, ChevronDown, Store
 } from 'lucide-react'
@@ -122,7 +122,18 @@ function Dashboard() {
   }, [products, q])
 
   const exportData = () => {
-    const data = JSON.stringify({ products, categories, settings: useStore.getState().settings, exportedAt: new Date().toISOString() }, null, 2)
+    const data = JSON.stringify(
+      {
+        app: 'AYAH',
+        schemaVersion: 1,
+        products,
+        categories,
+        settings: useStore.getState().settings,
+        exportedAt: new Date().toISOString()
+      },
+      null,
+      2
+    )
     const blob = new Blob([data], { type: 'application/json' })
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
@@ -130,7 +141,7 @@ function Dashboard() {
     a.download = `ayah-backup-${new Date().toISOString().slice(0, 10)}.json`
     a.click()
     URL.revokeObjectURL(url)
-    toast('Backup downloaded', '💾')
+    toast('Transfer backup downloaded', '📲')
   }
 
   const importFile = (e) => {
@@ -161,8 +172,8 @@ function Dashboard() {
     { icon: Package, title: 'Manage products', desc: 'Edit, feature, stock, delete', accent: 'from-sky-500 to-blue-600', onClick: () => setManageOpen((v) => !v) },
     { icon: Layers, title: 'Categories', desc: 'Add, rename, remove', accent: 'from-violet-500 to-purple-600', onClick: () => navigate('/admin/categories') },
     { icon: Settings, title: 'Store settings', desc: 'WhatsApp number, currency, PIN', accent: 'from-slate-500 to-slate-700', onClick: () => navigate('/admin/settings') },
-    { icon: Download, title: 'Export backup', desc: 'Download catalog as JSON', accent: 'from-emerald-500 to-green-600', onClick: exportData },
-    { icon: Upload, title: 'Import backup', desc: 'Restore from a JSON file', accent: 'from-teal-500 to-cyan-600', onClick: () => fileRef.current?.click() },
+    { icon: Smartphone, title: 'Transfer to another phone', desc: 'Download catalog + settings', accent: 'from-emerald-500 to-green-600', onClick: exportData },
+    { icon: Upload, title: 'Import backup', desc: 'Restore on this phone', accent: 'from-teal-500 to-cyan-600', onClick: () => fileRef.current?.click() },
     { icon: RotateCcw, title: 'Reset demo data', desc: 'Restore the starter catalog', accent: 'from-amber-500 to-orange-600', onClick: () => setConfirm({ title: 'Reset demo data?', message: 'All your products and categories will be replaced with the original demo set.', confirmLabel: 'Reset', action: resetDemo }) },
     { icon: HelpCircle, title: 'Setup guide', desc: 'Install & ordering tips', accent: 'from-fuchsia-500 to-pink-600', onClick: () => navigate('/help') }
   ]

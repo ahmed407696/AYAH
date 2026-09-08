@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { ArrowLeft, KeyRound, Save } from 'lucide-react'
 import { useStore } from '../store/app'
@@ -18,6 +18,12 @@ export default function AdminSettings() {
   const [current, setCurrent] = useState('')
   const [next, setNext] = useState('')
   const [confirm2, setConfirm2] = useState('')
+
+  useEffect(() => {
+    setWa(settings.whatsappNumber)
+    setCurrency(settings.currency)
+    setTagline(settings.tagline)
+  }, [settings.whatsappNumber, settings.currency, settings.tagline])
 
   const saveStore = () => {
     const clean = wa.replace(/[^0-9]/g, '')
